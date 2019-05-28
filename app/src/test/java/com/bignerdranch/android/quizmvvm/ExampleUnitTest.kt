@@ -42,6 +42,11 @@ class ExampleUnitTest {
     }
 
     @Test
+    fun someMoreTest() {
+        assertEquals(4, (2 + 2).toLong())
+    }
+
+    @Test
     fun getQuestionString() {
         whenever(quizList[any()]).thenReturn(question)
 
