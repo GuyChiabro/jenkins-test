@@ -51,7 +51,6 @@ class ExampleUnitTest {
         assertEquals(4, (2 + 2).toLong())
     }
 
-
     @Test
     fun getQuestionString() {
         whenever(quizList[any()]).thenReturn(question)
