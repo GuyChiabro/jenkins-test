@@ -48,7 +48,7 @@ class ExampleUnitTest {
 
     @Test
     fun evenMoreTest() {
-        assertEquals(4, (2 + 2).toLong())
+        assertEquals(5, (2 + 2).toLong())
     }
 
     @Test
