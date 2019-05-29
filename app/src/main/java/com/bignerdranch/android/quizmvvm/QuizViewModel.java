@@ -12,7 +12,6 @@ public class QuizViewModel extends BaseObservable {
     private Context mContext;
     private List<Question> mQuestionList;
 
-
     QuizViewModel(List<Question> quizList, Context context) {
         mQuestionList = quizList;
         mQuestion = quizList.get(QuestionList.getIndex());
