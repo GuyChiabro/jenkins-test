@@ -18,7 +18,7 @@ public class QuizFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mQuizList = QuestionList.getInstance(getContext());
+        mQuizList = QuestionList.getInstance(getContext().getApplicationContext());
 
     }
 
@@ -29,7 +29,7 @@ public class QuizFragment extends Fragment {
         FragmentQuizBinding mBinding = DataBindingUtil
                 .inflate(inflater, R.layout.fragment_quiz, container, false);
 
-        mBinding.setViewModel(new QuizViewModel(mQuizList.getQuestionList(), getContext()));
+        mBinding.setViewModel(new QuizViewModel(mQuizList.getQuestionList(), getContext().getApplicationContext()));
         return mBinding.getRoot();
     }
 

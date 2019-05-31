@@ -19,7 +19,7 @@ public class QuizViewModel extends BaseObservable {
     }
 
     public void trueButtonOnClick() {
-        if (mQuestion.isAnswerTrue()) {
+        if (mQuestion.getAnswerTrue()) {
             Toast.makeText(mContext, mContext.getString(R.string.correct_toast), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(mContext, mContext.getString(R.string.incorrect_toast), Toast.LENGTH_SHORT).show();
@@ -27,7 +27,7 @@ public class QuizViewModel extends BaseObservable {
     }
 
     public void falseButtonOnClick() {
-        if (!mQuestion.isAnswerTrue()) {
+        if (!mQuestion.getAnswerTrue()) {
             Toast.makeText(mContext, mContext.getString(R.string.correct_toast), Toast.LENGTH_SHORT).show();
         } else {
             Toast.makeText(mContext, mContext.getString(R.string.incorrect_toast), Toast.LENGTH_SHORT).show();
@@ -45,7 +45,7 @@ public class QuizViewModel extends BaseObservable {
 
     public String getQuestionString() {
         notifyChange();
-        return mQuestionList.get(QuestionList.getIndex()).getQuestionText();
+        return mQuestionList.get(QuestionList.getIndex()).getQuestion();
     }
 
 }

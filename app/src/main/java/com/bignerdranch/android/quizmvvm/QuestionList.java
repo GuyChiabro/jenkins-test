@@ -30,7 +30,7 @@ public class QuestionList {
 
     static QuestionList getInstance(Context context) {
         if (questionListInstance == null) {
-            questionListInstance = new QuestionList(context.getApplicationContext());
+            questionListInstance = new QuestionList(context);
             return questionListInstance;
         }
         return questionListInstance;
